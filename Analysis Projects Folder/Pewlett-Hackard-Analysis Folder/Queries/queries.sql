@@ -31,3 +31,15 @@ INTO retirement_info
 FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
     AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+--query for reitrement numbers grouped by title
+select count(title), title
+from updated_retiring_employees
+group by title
+order by title;
+
+--query for mentorship program
+select count(title), title
+from updated_employee_mentorship_program
+group by title
+order by title
